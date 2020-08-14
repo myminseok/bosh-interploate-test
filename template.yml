@@ -1,0 +1,18 @@
+
+product-name: pivotal-container-service
+product-properties:
+  .pivotal-container-service.pks_tls:
+    value:
+      cert_pem: ((pivotal-container-service_pks_tls_certificate))
+      private_key_pem: ((pivotal-container-service_pks_tls_privatekey))
+  .properties.log_sink_resources_deploy:
+    value: ((log_sink_resources_deploy))
+  .properties.myarrays: ((properties_myarrays))
+  
+resource-config:
+  pks-db:
+    instance_type:
+      id: ((pks-db_instance_type))
+    max_in_flight: ((pks-db_max_in_flight))
+    persistent_disk:
+      size_mb: ((pks-db_persistent_disk_size))
